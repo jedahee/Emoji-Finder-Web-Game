@@ -14,6 +14,8 @@
 * {
     outline: none;
     border: none;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
@@ -277,6 +279,7 @@ body {
         width: 100vw;
         height: 100vh;
         box-shadow: none;
+        position: fixed;
     }
 
     .stats{
@@ -286,7 +289,6 @@ body {
     }
 
     .end-game-panel > h1 {
-        font-size: 3em;
         margin: 0;
     }
 
@@ -296,6 +298,14 @@ body {
 }
 
 @media only screen and (max-width: 500px) {
+    *::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    body {
+        padding: 0;
+    }
+
     .grid {
         min-width: 290px;
         box-shadow: none;
@@ -303,6 +313,10 @@ body {
 
     .container-punct, .container-time {
         box-shadow: none;
+    }
+	
+	.end-game-panel > h1 {
+        margin: 0;
     }
 
 }
