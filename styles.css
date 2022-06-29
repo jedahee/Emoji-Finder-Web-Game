@@ -1,0 +1,308 @@
+
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@400;500&display=swap');
+
+/* VARS */
+:root {
+    --red: #f33e3e;
+    --white: #f2f2f2;
+    --gray: #cdcdcd;
+    --dark: #494949;
+    --black: #000000;
+}
+
+/* RESET */
+* {
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'M PLUS 1 Code', sans-serif;
+}
+
+/* SCROLLBAR */
+
+*::-webkit-scrollbar {
+    width: 18px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--dark);
+    border-radius: 20px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: var(--white);
+    border-radius: 20px;
+}
+
+/* BASIC STYLES */
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(img/810.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+/* PANEL EMOJIS STYLES */
+
+.grid {
+    width: max-content;
+    max-width: 55vw;
+    min-width: 350px;
+    height: max-content;
+    max-height: 90vh;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    border-radius: 5px;
+    box-shadow: -20px 20px 0px 1px var(--black);
+    overflow: auto;
+    background-color: var(--gray);
+
+}
+
+.item-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.emoji {
+    font-size: 2.5em;
+    transition: transform .2s ease;
+    cursor: pointer;
+    pointer-events: all;
+    padding: .5rem 1rem;
+
+}
+
+.emoji:hover {
+    transform: scale(1.3);
+}
+
+.info-img {
+    width: 256px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    transition: transform .2s ease, opacity .2s ease;
+
+}
+
+/* CONTAINERS STYLES */
+
+.container-punct, .container-time {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 40px;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: -10px 10px 0px 1px var(--black);
+    background-color: var(--gray);
+}
+
+.container-punct span, .container-time span {
+    text-align: center;
+}
+
+.container-punct {
+    right: 40px;
+}
+
+.container-time {
+    left: 40px;
+}
+
+.punct, .time {
+    font-size: 3em;
+}
+
+.title {
+    font-size: 3em;
+}
+
+/* DEFEAT PANEL STYLES */
+
+.end-game-panel {
+    background-color: var(--red);
+    box-shadow: -10px 10px 0px 1px var(--black);
+    padding: 2rem 2.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 85vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: opacity .2s ease, transform .2s ease;
+}
+
+.end-game-panel h1, .end-game-panel span {
+    color: var(--white);
+}
+
+.end-game-panel > h1 {
+    font-size: 3.5em;
+    text-align: center;
+    margin-top: 0;
+    letter-spacing: 2px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+
+.container span {
+    font-size: 2em;
+}
+
+.actual-punct {
+    transform: scale(1.3) translateY(-10px);
+}
+
+.best-punct, .last-punct {
+    opacity: .8;
+}
+
+.restart-btn {
+    width: 100%;
+    background-color: var(--black);
+    color: var(--white);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    font-weight: 400;
+    font-size: 1.3em;
+    text-align: center;
+    margin-top: 1.5rem;
+    border-bottom: 2px solid var(--white);
+    border-left: 2px solid var(--white);
+    transition: box-shadow .2s ease;
+}
+
+.restart-btn:hover {
+    box-shadow: -10px 10px 0px 1px var(--white);
+}
+
+/* CSS class that is used in JS */
+
+.info-img-active-anim {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.active {
+    transform: scale(1.3);
+    background-color: #00000059;
+    border-radius: 60px;
+    pointer-events: none;
+}
+
+.hidden {
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* BREAKPOINTS */
+
+@media only screen and (max-width: 1200px) {
+    .end-game-panel {
+        width: 93vw;
+        background-repeat: no-repeat;
+    }
+
+    body {
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+
+    .grid {
+        grid-row-start: 1;
+        max-width: none;
+        width: 100%;
+    }
+
+    .container-time {
+        margin: 2rem 0;
+    }
+
+    .container-punct, .container-time {
+        position: unset;
+
+    }
+}
+
+@media only screen and (max-width: 1070px) {
+    .end-game-panel {
+        width: 100vw;
+        height: 100vh;
+        box-shadow: none;
+    }
+
+    .stats{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    .end-game-panel > h1 {
+        font-size: 3em;
+        margin: 0;
+    }
+
+    .container h1 {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .grid {
+        min-width: 290px;
+        box-shadow: none;
+    }
+
+    .container-punct, .container-time {
+        box-shadow: none;
+    }
+
+}

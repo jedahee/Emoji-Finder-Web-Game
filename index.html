@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Title -->
+    <title>EmojiFinder</title>
+</head>
+<body>
+    <!-- Time container -->
+    <section class="container-time">
+        <span class="title">Tiempo</span>
+        <hr>
+        <span class="time"></span>
+    </section>
+
+    <!-- Emoji's Panel container -->
+    <main class="grid">
+        
+    </main>
+    
+    <!-- Img -->
+    <img src="img/check.png" class="info-img check">
+    <img src="img/remove.png" class="info-img remove">
+
+    <!-- Punctuation container -->
+    <section class="container-punct">
+        <span class="title">Punt.</span>
+        <hr>
+        <span class="punct"></span>
+    </section>
+
+    <!-- Defeat panel -->
+    <section class="end-game-panel hidden">
+        <h1>PERDISTE :C</h1>
+        <div class="stats">
+            <div class="container best-punct">
+                <h1>MEJOR PUNTUACIÓN</h1>
+                <span class="best-punct-span"></span>
+            </div>
+            
+            <div class="container actual-punct">
+                <h1>PUNTUACIÓN</h1>
+                <span class="actual-punct-span"></span>
+            </div>
+
+            <div class="container last-punct">
+                <h1>ÚLTIMA PUNTUACIÓN</h1>
+                <span class="last-punct-span"></span>
+            </div>
+        </div>
+
+        <button class="restart-btn">
+            Volver a jugar 🔄
+        </button>
+    </section>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+</html>
