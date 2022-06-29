@@ -289,7 +289,7 @@ body {
     }
 
     .end-game-panel > h1 {
-        margin: 0;
+        font-size: 3em;
     }
 
     .container h1 {
