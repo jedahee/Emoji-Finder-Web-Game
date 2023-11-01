@@ -1,4 +1,4 @@
-# EmojiFInder
+# EmojiFinder
 
 _EmojiFinder is a web game that tries to find the repeated emojis in the shortest possible time.._
 
