@@ -1,8 +1,8 @@
 # EmojiFInder
 
-_EmojiFInder is a web game where you measure the number of clicks you can make per second._
+_EmojiFinder is a web game that tries to find the repeated emojis in the shortest possible time.._
 
-![image](https://github.com/jedahee/Clickame-Web-Game/assets/56111700/fad31701-bcaa-42e4-867d-6ccadabe0afd)
+![image](https://github.com/jedahee/Emoji-Finder-Web-Game/assets/56111700/049aec7d-181a-44ad-98a5-1069899f8115)
 
 ## Getting Started 🚀
 
@@ -21,7 +21,7 @@ _These are the next steps to be able to execute the project in your local enviro
 _You can use Git or Github to clone the project in a local environment. If you use Github you must click on the button that says 'Code' and then on 'Download Zip'. But if you use Git you can use the following command:_
 
 ```
-git clone https://github.com/jedahee/Clickame-Web-Game.git)
+git clone https://github.com/jedahee/Emoji-Finder-Web-Game.git)
 ```
 
 ## Deployment 📦
