@@ -26,9 +26,11 @@ git clone https://github.com/jedahee/Emoji-Finder-Web-Game.git)
 
 ## Deployment 📦
 
-_This project is not yet deployed._
+_This project is deployed in Github Pages._
 
-_For easy deployment, you can use hosting such as Github Pages, Netlify, Vercel, etc._
+_If you want to try the project visit:_
+
+**https://jedahee.github.io/Emoji-Finder-Web-Game/**
 
 ## Built With 🛠️
 
